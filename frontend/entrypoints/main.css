@@ -1,1 +1,18 @@
 @import "tailwindcss" source("../..");
+
+@layer base {
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+
+    /* TODO: REMOVE ON PROD */
+    #shopify-pc__banner {
+        display: none !important;
+    }
+}
+
+@theme {
+    --breakpoint-md: 750px;
+    --breakpoint-mdg: 990px;
+}
